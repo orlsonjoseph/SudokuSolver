@@ -1,13 +1,13 @@
 from math import sqrt
 
 class Sudoku:
-    def __init__(self, grid) -> None:
+    def __init__(self, grid):
         self.grid = grid
 
         self.M = len(self.grid)
         self.N = int(sqrt(self.M))
 
-    def is_legal(self, row, col, num) -> bool:
+    def is_legal(self, row, col, num):
         for x in range(self.M):
             if self.grid[row][x] == num:
                 return False
@@ -44,7 +44,7 @@ class Sudoku:
 
         return False
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         output = ""
 
         for i in range(self.M):
